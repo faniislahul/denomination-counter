@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Denomination Counter",
+  "name": "Denomination Counter",
   "icons": [
     {
       "src": "favicon.ico",

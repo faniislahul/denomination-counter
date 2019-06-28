@@ -1,0 +1,155 @@
+$mainBackground: rgb(17,17,17);
+$mainTextColor: #fff;
+$subTextColor: #eaeaea;
+$panelColor: #404040;
+$accentColor: #42b549;
+$highlightColor: #38D843;
+$errorColor: rgb(255, 85, 85);
+
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: $mainBackground;
+    background: linear-gradient(324deg, rgba(17,17,17,1) 0%, rgba(64,64,64,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        color: $mainTextColor;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    h3{
+        color: $mainTextColor;
+        margin-bottom: 20px;
+    }
+}
+
+.input-bar{
+    display: flex;
+    flex-direction: row;
+
+    .button{
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 2px;
+        color: $mainTextColor;
+        background-color: $accentColor;
+        font-size: 1.1em;
+        transition: all 400ms ease-in-out;
+        
+        &:hover{
+            cursor: pointer;
+            background-color: $highlightColor;
+            
+        }
+    }
+    .button.extend{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .button.error{
+        background-color: $errorColor;
+        cursor: not-allowed;
+    }
+
+    .input{
+        width: 25vw;
+        min-width: 140px;
+        padding: 16px 20px;
+        background-color: $panelColor;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        color: $subTextColor;
+        border-width: 0;
+        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        font-size: 1.1em;
+        
+        &:focus{
+            outline-width: 0;
+        }
+    }
+    .input.collapsed{
+        width:0px!important;
+        min-width:0px!important;
+        padding: 10px 0px;
+        overflow: hidden;
+    }
+}
+
+.error-message{
+    color: $errorColor;
+    font-size: .78em;
+    margin-top: 10px;
+}
+.sub-header{
+    margin-top: 50px;
+}
+.result-box{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 20px;
+}
+.card{
+    padding: 10px 20px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    background-color: $panelColor;
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+    .bubble{
+        margin: 5px 20px 5px 0px;
+        border-color: $accentColor;
+        border-width: 5px;
+        border-style: solid;
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        font-size: 1.5em;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-desc{
+        font-size: .78em;
+        margin-top: 5px;
+    }
+
+    h3{
+        color: $mainTextColor;
+        margin: 0;
+        font-size: 1.5em;
+    }
+    span{
+        color: $subTextColor;
+        font-size: .78em;
+    }
+    
+}
